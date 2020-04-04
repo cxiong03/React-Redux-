@@ -18,14 +18,19 @@
                 name: 'Chang',
                 age: 28
             }
-            handleClick(e){
+            // the 'this' only work for arrow functions
+            handleClick = (e) => {
                 // console.log(e.target);
+                this.setState({
+                    name: 'Mon$y',
+                    age: 21
+                })
                 console.log(this.state)
             }
-            handleMouseOver(e){
+            handleMouseOver = (e) => {
                 console.log(e.target, e.pageX);
             }
-            handleCopy(e){
+            handleCopy = (e) => {
                 console.log('Try being original for once!');
             }
             render() {
